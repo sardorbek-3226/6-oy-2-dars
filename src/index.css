@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #FF4343;
+  --secondary: #100E14;
+  --accent: #CC7A01;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-xl px-5 cursor-pointer transition-all hover:bg-transparent duration-500 border border-transparent hover:text-primary hover:border-primary py-3 rounded text-white flex items-center justify-center gap-3;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
